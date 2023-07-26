@@ -3,7 +3,6 @@ from playsound import playsound
 import time
 
 CLEAR = "\033[2J"
-CLEAR_AND_RETURN = "\033[H"
 
 def alarm(seconds):
     time_elapsed = 0
@@ -17,7 +16,7 @@ def alarm(seconds):
         minutes_left = time_left // 60
         seconds_left = time_left % 60
 
-        print(f"{CLEAR_AND_RETURN}{minutes_left:02d}:{seconds_left:02d}")
+        print(f"{minutes_left:02d}:{seconds_left:02d}")
 
 playsound("sueco.mp3")
     
